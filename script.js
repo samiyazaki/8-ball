@@ -2,7 +2,6 @@ var wins = 0;
 var ties = 0; 
 var losses = 0; 
 
-
 var gameOptions = ["R", "P", "S"]; 
 
 var playGame = function() {
@@ -45,7 +44,9 @@ window.alert(
 );
 
 var replay = window.confirm("Would You Like To Play Again?"); 
-
+if(losses > 3) {
+    return;
+}
 if(replay) {
     playGame();
 }
